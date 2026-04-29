@@ -1,0 +1,345 @@
+[
+  {
+    "name": "Sujatha",
+    "city": "Hyderabad",
+    "area": "Jubilee Hills",
+    "rating": 4.8,
+    "experience": 17,
+    "eventTypes": ["Marriage", "Reception", "Cradle Ceremony"],
+    "servicesOffered": ["Bridal Makeup","HD Makeup","Hair Styling","Hair Bun","Saree Draping","Jewellery Setting","Mehendi"],
+    "servicePrices": {
+      "Bridal Makeup": 18000,
+      "HD Makeup": 9000,
+      "Hair Styling": 2500,
+      "Hair Bun": 1800,
+      "Saree Draping": 1500,
+      "Jewellery Setting": 1200,
+      "Mehendi": 3500
+    }
+  },
+  {
+    "name": "Hifi Beauty Salon",
+    "city": "Hyderabad",
+    "area": "Banjara Hills",
+    "rating": 4.7,
+    "experience": 8,
+    "eventTypes": ["Marriage", "Engagement"],
+    "servicesOffered": ["Bridal Makeup","HD Makeup","Airbrush Makeup","Hair Styling","Traditional Makeup","Jewellery Setting"],
+    "servicePrices": {
+      "Bridal Makeup": 22000,
+      "HD Makeup": 11000,
+      "Airbrush Makeup": 15000,
+      "Hair Styling": 2500,
+      "Traditional Makeup": 7000,
+      "Jewellery Setting": 1500
+    }
+  },
+  {
+    "name": "Glowvy Makeover",
+    "city": "Hyderabad",
+    "area": "Madhapur",
+    "rating": 4.9,
+    "experience": 6,
+    "eventTypes": ["Marriage", "Sangeet", "Reception"],
+    "servicesOffered": ["Bridal Makeup","Party Makeup","HD Makeup","Hair Styling","Hair Waves","Accessory Styling","Saree Draping"],
+    "servicePrices": {
+      "Bridal Makeup": 16000,
+      "Party Makeup": 7000,
+      "HD Makeup": 8500,
+      "Hair Styling": 2200,
+      "Hair Waves": 1800,
+      "Accessory Styling": 1200,
+      "Saree Draping": 1500
+    }
+  },
+  {
+    "name": "Blush & Blend Sahithi",
+    "city": "Hyderabad",
+    "area": "Secunderabad",
+    "rating": 4.8,
+    "experience": 10,
+    "eventTypes": ["Marriage", "Reception"],
+    "servicesOffered": ["Bridal Makeup","Party Makeup","Hair Styling","Saree Draping","Dupatta Draping","Jewellery Setting"],
+    "servicePrices": {
+      "Bridal Makeup": 17000,
+      "Party Makeup": 7500,
+      "Hair Styling": 2300,
+      "Saree Draping": 1600,
+      "Dupatta Draping": 1200,
+      "Jewellery Setting": 1300
+    }
+  },
+  {
+    "name": "Dhivya Makeup Artist",
+    "city": "Hyderabad",
+    "area": "Nagole",
+    "rating": 4.7,
+    "experience": 5,
+    "eventTypes": ["Engagement", "Reception", "Marriage"],
+    "servicesOffered": ["Engagement Makeup","HD Makeup","Party Makeup","Hair Styling","Traditional Makeup","Jewellery Setting"],
+    "servicePrices": {
+      "Engagement Makeup": 9000,
+      "HD Makeup": 8000,
+      "Party Makeup": 6500,
+      "Hair Styling": 2000,
+      "Traditional Makeup": 6000,
+      "Jewellery Setting": 1200
+    }
+  },
+  {
+    "name": "RK Studio Makeover",
+    "city": "Hyderabad",
+    "area": "Vanasthalipuram",
+    "rating": 4.6,
+    "experience": 7,
+    "eventTypes": ["Marriage", "Birthday"],
+    "servicesOffered": ["Bridal Makeup","Party Makeup","Hair Styling","Light Makeup","Hair Curls","Nail Art"],
+    "servicePrices": {
+      "Bridal Makeup": 14000,
+      "Party Makeup": 5000,
+      "Hair Styling": 1800,
+      "Light Makeup": 2500,
+      "Hair Curls": 1500,
+      "Nail Art": 1000
+    }
+  },
+  {
+    "name": "Heena Chughi Makeovers",
+    "city": "Hyderabad",
+    "area": "Sainikpuri",
+    "rating": 4.5,
+    "experience": 9,
+    "eventTypes": ["Marriage", "Mehendi"],
+    "servicesOffered": ["Bridal Makeup","Mehendi Design","Bridal Mehendi","Guest Mehendi","Accessory Styling","Hair Styling"],
+    "servicePrices": {
+      "Bridal Makeup": 15000,
+      "Mehendi Design": 3000,
+      "Bridal Mehendi": 7000,
+      "Guest Mehendi": 1500,
+      "Accessory Styling": 1200,
+      "Hair Styling": 2000
+    }
+  },
+  {
+    "name": "Siri Makeovers",
+    "city": "Hyderabad",
+    "area": "Kukatpally",
+    "rating": 4.6,
+    "experience": 6,
+    "eventTypes": ["Engagement", "Marriage"],
+    "servicesOffered": ["Engagement Makeup","Bridal Makeup","Hair Styling","Hair Curls","Saree Draping","Jewellery Setting"],
+    "servicePrices": {
+      "Engagement Makeup": 8500,
+      "Bridal Makeup": 14500,
+      "Hair Styling": 1800,
+      "Hair Curls": 1500,
+      "Saree Draping": 1400,
+      "Jewellery Setting": 1100
+    }
+  },
+  {
+    "name": "MK Makeover Studios",
+    "city": "Hyderabad",
+    "area": "Gachibowli",
+    "rating": 4.7,
+    "experience": 8,
+    "eventTypes": ["Marriage", "Engagement"],
+    "servicesOffered": ["Bridal Makeup","HD Makeup","Hair Styling","Saree Draping","Jewellery Setting"],
+    "servicePrices": {
+      "Bridal Makeup": 15000,
+      "HD Makeup": 8500,
+      "Hair Styling": 2200,
+      "Saree Draping": 1500,
+      "Jewellery Setting": 1200
+    }
+  },
+  {
+    "name": "Nancy Studios",
+    "city": "Hyderabad",
+    "area": "Ameerpet",
+    "rating": 4.8,
+    "experience": 7,
+    "eventTypes": ["Marriage", "Mehendi", "Cradle Ceremony"],
+    "servicesOffered": ["Bridal Makeup","Light Makeup","Hair Styling","Mehendi Design","Saree Draping","Traditional Makeup"],
+    "servicePrices": {
+      "Bridal Makeup": 12000,
+      "Light Makeup": 2500,
+      "Hair Styling": 1800,
+      "Mehendi Design": 2800,
+      "Saree Draping": 1300,
+      "Traditional Makeup": 5500
+    }
+  },
+  {
+    "name": "Haritha Makeovers",
+    "city": "Hyderabad",
+    "area": "LB Nagar",
+    "rating": 4.6,
+    "experience": 6,
+    "eventTypes": ["Marriage", "Engagement", "Half Saree Ceremony", "Birthday"],
+    "servicesOffered": ["Traditional Makeup","Engagement Makeup","Hair Styling","Hair Braid Styling","Half Saree Draping","Saree Draping","Jewellery Setting"],
+    "servicePrices": {
+      "Traditional Makeup": 6000,
+      "Engagement Makeup": 8000,
+      "Hair Styling": 1800,
+      "Hair Braid Styling": 1500,
+      "Half Saree Draping": 1800,
+      "Saree Draping": 1400,
+      "Jewellery Setting": 1200
+    }
+  },
+  {
+    "name": "Tamanna Rooz",
+    "city": "Hyderabad",
+    "area": "Banjara Hills",
+    "rating": 4.5,
+    "experience": 15,
+    "eventTypes": ["Marriage", "Reception", "Engagement"],
+    "servicesOffered": ["Bridal Makeup","Party Makeup","Hair Styling","Saree Draping","Dupatta Draping","Jewellery Setting"],
+    "servicePrices": {
+      "Bridal Makeup": 20000,
+      "Party Makeup": 8000,
+      "Hair Styling": 2500,
+      "Saree Draping": 1700,
+      "Dupatta Draping": 1300,
+      "Jewellery Setting": 1400
+    }
+  },
+  {
+    "name": "Aliya Baig",
+    "city": "Hyderabad",
+    "area": "Jubilee Hills",
+    "rating": 4.6,
+    "experience": 17,
+    "eventTypes": ["Marriage", "Engagement", "Sangeet"],
+    "servicesOffered": ["Bridal Makeup","HD Makeup","Airbrush Makeup","Hair Styling","Party Makeup","Jewellery Setting"],
+    "servicePrices": {
+      "Bridal Makeup": 21000,
+      "HD Makeup": 10000,
+      "Airbrush Makeup": 14000,
+      "Hair Styling": 2600,
+      "Party Makeup": 7500,
+      "Jewellery Setting": 1500
+    }
+  },
+  {
+    "name": "Mahdiyeh Studio",
+    "city": "Hyderabad",
+    "area": "Madhapur",
+    "rating": 4.9,
+    "experience": 10,
+    "eventTypes": ["Marriage", "Reception", "Sangeet"],
+    "servicesOffered": ["Bridal Makeup","Party Makeup","Hair Styling","Hair Waves","Saree Draping","Accessory Styling"],
+    "servicePrices": {
+      "Bridal Makeup": 23000,
+      "Party Makeup": 9000,
+      "Hair Styling": 2600,
+      "Hair Waves": 1800,
+      "Saree Draping": 1700,
+      "Accessory Styling": 1300
+    }
+  },
+  {
+    "name": "Siro Studio",
+    "city": "Hyderabad",
+    "area": "Secunderabad",
+    "rating": 4.0,
+    "experience": 12,
+    "eventTypes": ["Marriage", "Sangeet"],
+    "servicesOffered": ["Party Makeup","HD Makeup","Hair Styling","Hair Waves","Lehenga Draping","Nail Art"],
+    "servicePrices": {
+      "Party Makeup": 6500,
+      "HD Makeup": 8000,
+      "Hair Styling": 2200,
+      "Hair Waves": 1700,
+      "Lehenga Draping": 1800,
+      "Nail Art": 900
+    }
+  },
+  {
+    "name": "Service Ninjas",
+    "city": "Hyderabad",
+    "area": "Gachibowli",
+    "rating": 4.5,
+    "experience": 5,
+    "eventTypes": ["Birthday", "Cradle Ceremony"],
+    "servicesOffered": ["Light Makeup","Party Makeup","Hair Styling","Hair Curls","Kids Styling","Simple Makeup"],
+    "servicePrices": {
+      "Light Makeup": 2200,
+      "Party Makeup": 3500,
+      "Hair Styling": 1500,
+      "Hair Curls": 1200,
+      "Kids Styling": 1000,
+      "Simple Makeup": 1800
+    }
+  },
+  {
+    "name": "Noor Zaidi Salon",
+    "city": "Hyderabad",
+    "area": "Charminar",
+    "rating": 4.9,
+    "experience": 8,
+    "eventTypes": ["Mehendi", "Engagement"],
+    "servicesOffered": ["Mehendi Design","Bridal Mehendi","Guest Mehendi","Light Makeup","Hair Styling","Floral Jewellery Styling"],
+    "servicePrices": {
+      "Mehendi Design": 4000,
+      "Bridal Mehendi": 8000,
+      "Guest Mehendi": 1800,
+      "Light Makeup": 2500,
+      "Hair Styling": 1800,
+      "Floral Jewellery Styling": 1200
+    }
+  },
+  {
+    "name": "Anusha Traditional Makeovers",
+    "city": "Hyderabad",
+    "area": "Dilsukhnagar",
+    "rating": 4.7,
+    "experience": 6,
+    "eventTypes": ["Half Saree Ceremony", "Cradle Ceremony", "Engagement"],
+    "servicesOffered": ["Traditional Makeup","Hair Styling","Half Saree Draping","Traditional Styling","Accessory Styling","Light Makeup"],
+    "servicePrices": {
+      "Traditional Makeup": 5500,
+      "Hair Styling": 1700,
+      "Half Saree Draping": 1900,
+      "Traditional Styling": 1400,
+      "Accessory Styling": 1200,
+      "Light Makeup": 2400
+    }
+  },
+  {
+    "name": "Lavanya Bridal Studio",
+    "city": "Hyderabad",
+    "area": "Kompally",
+    "rating": 4.8,
+    "experience": 9,
+    "eventTypes": ["Marriage", "Reception", "Engagement"],
+    "servicesOffered": ["Bridal Makeup","Party Makeup","Hair Styling","Saree Draping","Dupatta Draping","Accessory Styling","Jewellery Setting"],
+    "servicePrices": {
+      "Bridal Makeup": 19000,
+      "Party Makeup": 8500,
+      "Hair Styling": 2400,
+      "Saree Draping": 1600,
+      "Dupatta Draping": 1300,
+      "Accessory Styling": 1300,
+      "Jewellery Setting": 1400
+    }
+  },
+  {
+    "name": "Keerthi Kids & Family Makeovers",
+    "city": "Hyderabad",
+    "area": "Uppal",
+    "rating": 4.6,
+    "experience": 5,
+    "eventTypes": ["Birthday", "Cradle Ceremony"],
+    "servicesOffered": ["Light Makeup","Party Makeup","Hair Styling","Kids Styling","Simple Makeup","Nail Art"],
+    "servicePrices": {
+      "Light Makeup": 2500,
+      "Party Makeup": 3800,
+      "Hair Styling": 1600,
+      "Kids Styling": 1200,
+      "Simple Makeup": 2000,
+      "Nail Art": 800
+    }
+  }
+]

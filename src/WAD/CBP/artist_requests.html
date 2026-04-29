@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Booking Requests</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="navbar">
+    <div class="logo">✨ GlamConnect</div>
+    <div class="nav-center">
+        <a href="events.html">Book Now</a>
+        <a href="artist_dashboard.html">Dashboard</a>
+    </div>
+    <div class="nav-right">
+        <span class="user-badge">👤 <span id="artistTopName"></span></span>
+        <button onclick="logoutUser()">⎋</button>
+    </div>
+</div>
+
+<div class="dashboard-container">
+    <div class="sidebar">
+        <div class="profile-card">
+            <div class="avatar">🎨</div>
+            <h3 id="artistNameCard"></h3>
+            <p>Professional Artist</p>
+        </div>
+
+        <ul class="menu">
+            <li onclick="goToArtistDashboard()">🏠 Dashboard</li>
+            <li class="active" onclick="goToArtistRequests()">📩 Booking Requests</li>
+            <li onclick="goToArtistConfirmed()">✅ Confirmed</li>
+            <li onclick="goToArtistAvailability()">🗓️ Availability</li>
+            <li onclick="goToArtistServices()">💄 Services & Pricing</li>
+            <li onclick="goToArtistReviews()">⭐ Reviews</li>
+            <li onclick="goToArtistEarnings()">💰 Earnings</li>
+            <li onclick="goToArtistProfile()">👤 Profile</li>
+        </ul>
+    </div>
+
+    <div class="dashboard-content">
+        <h1>Booking <span style="color:#d63384">Requests</span> 📩</h1>
+
+        <div class="request-card">
+            <div class="request-top">
+                <div>
+                    <h2>Rahul Kumar</h2>
+                    <div class="request-grid">
+                        <p>🎉 Marriage</p>
+                        <p>📅 2026-04-20</p>
+                        <p>⏰ 09:00 AM</p>
+                        <p>📍 Hyderabad</p>
+                        <p>👥 3 person(s)</p>
+                    </div>
+                    <div class="service-tags">
+                        <span>HD Makeup</span>
+                        <span>Hair Bun</span>
+                        <span>Saree Draping</span>
+                    </div>
+                    <button class="accept-btn">✓ Accept</button>
+                    <button class="reject-btn">✕ Reject</button>
+                </div>
+                <span class="status-pill pending-pill">Pending</span>
+            </div>
+        </div>
+
+        <div class="request-card">
+            <div class="request-top">
+                <div>
+                    <h2>Sneha Patel</h2>
+                    <div class="request-grid">
+                        <p>🎉 Birthday</p>
+                        <p>📅 2026-04-25</p>
+                        <p>⏰ 04:00 PM</p>
+                        <p>📍 Hyderabad</p>
+                        <p>👥 1 person(s)</p>
+                    </div>
+                    <div class="service-tags">
+                        <span>Party Makeup</span>
+                    </div>
+                    <button class="accept-btn">✓ Accept</button>
+                    <button class="reject-btn">✕ Reject</button>
+                </div>
+                <span class="status-pill pending-pill">Pending</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let artistName = localStorage.getItem("username") || "Priya Sharma";
+document.getElementById("artistTopName").innerText = artistName;
+document.getElementById("artistNameCard").innerText = artistName;
+</script>
+<script src="script.js"></script>
+</body>
+</html>

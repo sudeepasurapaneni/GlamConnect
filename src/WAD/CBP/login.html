@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Artist Booking - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- LEFT SECTION -->
+    <div class="left">
+        <h1 id="mainTitle">Find Your Perfect Artist</h1>
+        <p class="subtitle">
+            Connect with top beauty professionals for your special occasions.
+            From weddings to birthdays, we have got you covered.
+        </p>
+
+        <ul>
+            <li>✔ Verified professional artists</li>
+            <li>✔ Transparent pricing, no hidden fees</li>
+            <li>✔ Doorstep service at your convenience</li>
+        </ul>
+    </div>
+
+    <!-- RIGHT SECTION -->
+    <div class="right">
+        <div class="login-box">
+
+            <!-- TABS -->
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab('user')">Book Services</button>
+                <button class="tab" onclick="switchTab('artist')">Artist Login</button>
+            </div>
+
+            <h2>Welcome Back</h2>
+            <p class="small-text">Sign in to continue to your account</p>
+
+            <!-- LOGIN FORM -->
+            <form onsubmit="return loginUser()">
+
+                <label>Username</label>
+                <input type="text" id="loginUsername" placeholder="Enter your username" required>
+
+                <label>Email Address</label>
+                <input type="email" id="loginEmail" placeholder="you@example.com" required>
+
+                <label>Password</label>
+                <input type="password" id="loginPassword" placeholder="••••••••" required>
+
+                <div class="options">
+                    <label class="remember">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="forgot.html">Forgot password?</a>
+                </div>
+
+                <button class="login-btn">Sign In</button>
+
+                <p class="register-text">
+                    Don't have an account? <a href="register.html">Register</a>
+                </p>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Notifications</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">✨ GlamConnect</div>
+    <div class="nav-center">
+        <a href="events.html">Book Now</a>
+        <a href="user_dashboard.html">Dashboard</a>
+    </div>
+    <div class="nav-right">
+        <span class="user-badge">👤 <span id="username"></span></span>
+        <button onclick="logoutUser()">⎋</button>
+    </div>
+</div>
+
+<div class="dashboard-container">
+    <div class="sidebar">
+        <div class="profile-card">
+            <div class="avatar">👩</div>
+            <h3 id="userNameCard"></h3>
+            <p id="userEmail">s1@gamil.com</p>
+        </div>
+
+        <ul class="menu">
+            <li onclick="goToUserDashboard()">🏠 Dashboard</li>
+            <li onclick="goToBookings()">📋 My Bookings</li>
+            <li onclick="goToPastBookings()">📜 Past Bookings</li>
+            <li onclick="goToFavorites()">❤️ Favorites</li>
+            <li onclick="goToReviews()">⭐ Reviews</li>
+            <li class="active" onclick="goToNotifications()">🔔 Notifications</li>
+            <li onclick="goToProfile()">👤 Profile</li>
+        </ul>
+    </div>
+
+    <div class="dashboard-content">
+        <h1 class="page-title"><span>Notifications</span> 🔔</h1>
+
+        <div class="notice-card">
+            <div class="notice-icon">🔔</div>
+            <div>
+                <h2>Your booking with Priya Sharma is confirmed!</h2>
+                <p class="notice-time">2 hours ago</p>
+            </div>
+        </div>
+
+        <div class="notice-card">
+            <div class="notice-icon">🔔</div>
+            <div>
+                <h2>Reminder: Marriage event on April 15</h2>
+                <p class="notice-time">1 day ago</p>
+            </div>
+        </div>
+
+        <div class="notice-card">
+            <div class="notice-icon">🔔</div>
+            <div>
+                <h2>New artist available in your area!</h2>
+                <p class="notice-time">3 days ago</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let name = localStorage.getItem("username") || "Rahul Kumar";
+    document.getElementById("username").innerText = name;
+    document.getElementById("userNameCard").innerText = name;
+</script>
+<script src="script.js"></script>
+</body>
+</html>

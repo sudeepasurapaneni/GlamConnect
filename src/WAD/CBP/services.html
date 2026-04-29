@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="navbar">
+    <div class="logo">✨ GlamConnect</div>
+
+    <div class="nav-right">
+        <button class="nav-btn" onclick="window.location.href='home.html'">Home</button>
+        <button class="nav-btn" onclick="window.location.href='cart.html'">Cart</button>
+    </div>
+</div>
+<body>
+
+<!-- HEADER -->
+<div class="step-header">
+    <button class="back-btn"><a href="events.html">←</a></button>
+    <h2 id="eventTitle"></h2>
+</div>
+
+<div class="progress-bar">
+    <div class="progress"></div>
+</div>
+
+<!-- CONTENT -->
+<div class="service-container">
+    <h1>Who needs services?</h1>
+    <p class="subtitle">Add each person and select their required services</p>
+
+    <div id="peopleContainer"></div>
+
+    <button class="add-person-btn" onclick="addPerson()">+ Add Person</button>
+
+    <div class="nav-buttons">
+    <button class="back-nav" onclick="window.history.back()">← Back</button>
+    <button class="continue-nav" id="continueBtn">Continue →</button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

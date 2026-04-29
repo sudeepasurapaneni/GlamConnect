@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+        <h1>Password Recovery</h1>
+        <p class="subtitle">
+            Enter your email to receive a One-Time Password (OTP)
+            and reset your account securely.
+        </p>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+        <div class="login-box">
+
+            <h2>Forgot Password</h2>
+            <p class="small-text">Enter your email to receive OTP</p>
+
+            <form onsubmit="return sendOTP()">
+
+                <label>Email Address</label>
+                <input type="email" id="forgotEmail" placeholder="you@example.com" required>
+
+                <button class="login-btn">Send OTP</button>
+
+            </form>
+            <button onclick="goToLogin()" class="login-btn" style="margin-top:10px; background:#888;">
+    Back to Login
+</button>
+        </div>
+    </div>
+    
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

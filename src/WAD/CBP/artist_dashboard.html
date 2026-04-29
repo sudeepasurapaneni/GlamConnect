@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Artist Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">✨ GlamConnect</div>
+
+    <div class="nav-center">
+        <a href="events.html">Book Now</a>
+        <a href="artist_dashboard.html">Dashboard</a>
+    </div>
+
+    <div class="nav-right">
+        <span class="user-badge">👤 <span id="artistTopName"></span></span>
+        <button onclick="logoutUser()">⎋</button>
+    </div>
+</div>
+
+<div class="dashboard-container">
+    <div class="sidebar">
+        <div class="profile-card">
+            <div class="avatar">🎨</div>
+            <h3 id="artistNameCard"></h3>
+            <p>Professional Artist</p>
+        </div>
+
+        <ul class="menu">
+            <li class="active" onclick="goToArtistDashboard()">🏠 Dashboard</li>
+            <li onclick="goToArtistRequests()">📩 Booking Requests</li>
+            <li onclick="goToArtistConfirmed()">✅ Confirmed</li>
+            <li onclick="goToArtistAvailability()">🗓️ Availability</li>
+            <li onclick="goToArtistServices()">💄 Services & Pricing</li>
+            <li onclick="goToArtistReviews()">⭐ Reviews</li>
+            <li onclick="goToArtistEarnings()">💰 Earnings</li>
+            <li onclick="goToArtistProfile()">👤 Profile</li>
+        </ul>
+    </div>
+
+    <div class="dashboard-content">
+        <h1>Welcome, <span style="color:#d63384" id="artistWelcome"></span> 🎨</h1>
+
+        <div class="artist-stat-grid">
+            <div class="artist-stat-card">
+                <div class="icon">📅</div>
+                <h2>48</h2>
+                <p>Total Bookings</p>
+            </div>
+            <div class="artist-stat-card">
+                <div class="icon">🕒</div>
+                <h2>3</h2>
+                <p>Today's Appts</p>
+            </div>
+            <div class="artist-stat-card">
+                <div class="icon">⭐</div>
+                <h2>4.9</h2>
+                <p>Rating</p>
+            </div>
+            <div class="artist-stat-card">
+                <div class="icon">💲</div>
+                <h2>₹1.2L</h2>
+                <p>Earnings</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Pending Requests (2)</h2>
+
+        <div class="request-card">
+            <div class="request-top">
+                <div>
+                    <h3>Rahul Kumar • Marriage</h3>
+                    <p>📅 2026-04-20 &nbsp; ⏰ 09:00 AM</p>
+                </div>
+                <div>
+                    <button class="accept-btn">✓</button>
+                    <button class="reject-btn">✕</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="request-card">
+            <div class="request-top">
+                <div>
+                    <h3>Sneha Patel • Birthday</h3>
+                    <p>📅 2026-04-25 &nbsp; ⏰ 04:00 PM</p>
+                </div>
+                <div>
+                    <button class="accept-btn">✓</button>
+                    <button class="reject-btn">✕</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let artistName = localStorage.getItem("username") || "Priya Sharma";
+    document.getElementById("artistTopName").innerText = artistName;
+    document.getElementById("artistNameCard").innerText = artistName;
+    document.getElementById("artistWelcome").innerText = artistName.split(" ")[0];
+</script>
+<script src="script.js"></script>
+</body>
+</html>

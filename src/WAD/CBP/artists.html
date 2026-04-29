@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Artists Near You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="navbar">
+    <div class="logo">✨ GlamConnect</div>
+
+    <div class="nav-right">
+        <button class="nav-btn" onclick="window.location.href='home.html'">Home</button>
+        <button class="nav-btn" onclick="window.location.href='cart.html'">Cart</button>
+    </div>
+</div>
+<body>
+
+<!-- HEADER -->
+<div class="artists-header">
+    <button class="back-btn">
+        <a href="schedule.html">←</a>
+    </button>
+
+    <div>
+        <h2>Artists Near You</h2>
+        <p id="locationText">📍 Location</p>
+    </div>
+
+    <button class="cart-btn" onclick="goToCart()">🛒 Cart <span class="cart-count">0</span></button>
+</div>
+
+<!-- SELECTED SERVICES -->
+<div class="service-filter">
+    <p>Looking for artists who provide:</p>
+    <div id="serviceTags"></div>
+</div>
+
+<!-- ✅ EMPTY CONTAINER (IMPORTANT) -->
+<div class="artists-container"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

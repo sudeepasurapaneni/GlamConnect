@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GlamConnect - Select Event</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop id="bgVideo">
+    <source src="https://cdn.coverr.co/videos/coverr-confetti-falling-1573/1080p.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+<div class="confetti"></div>
+    
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">GlamConnect</div>
+    <div class="nav-center">
+        <a href="#">Book Now</a>
+        <a href="user_dashboard.html">Dashboard</a>
+    </div>
+    <div class="nav-right">
+        <span class="user">👤 <span id="username"></span></span>
+        <a href="#" class="logout" onclick="logoutUser()">⎋ Logout</a>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="event-container">
+    <h1>Select Your Event</h1>
+    <p class="event-subtitle">
+        Choose the type of occasion you're planning. We'll help you find the perfect beauty artists.
+    </p>
+
+    <div class="event-grid">
+        <div class="event-card birthday" data-event="Birthday">
+        <div class="overlay-text">
+            🎂
+            <h3>Birthday</h3>
+           
+        </div>
+    </div>
+
+<div class="event-card marriage" data-event="Marriage">
+        <div class="overlay-text">
+            💍
+            <h3>Marriage</h3>
+        </div>
+           
+    </div>
+
+    <div class="event-card reception" data-event="Reception">
+        <div class="overlay-text">
+            🥂
+            <h3>Reception</h3>
+           
+        </div>
+    </div>
+
+    <div class="event-card engagement" data-event="Engagement">
+        <div class="overlay-text">
+            💎
+            <h3>Engagement</h3>
+           
+        </div>
+    </div>
+
+    <div class="event-card mehendi" data-event="Mehendi">
+        <div class="overlay-text">
+            🌿
+            <h3>Mehendi</h3>
+           
+        </div>
+    </div>
+
+    <div class="event-card sangeet" data-event="Sangeet">
+        <div class="overlay-text">
+            💃
+            <h3>Sangeet</h3>
+            
+        </div>
+    </div>
+
+    <div class="event-card half-saree" data-event="Half Saree Ceremony">
+        <div class="overlay-text">
+            👗
+            <h3>Half Saree Ceremony</h3>
+           
+        </div>
+    </div>
+
+    <div class="event-card cradle" data-event="Cradle Ceremony">
+        <div class="overlay-text">
+            👶
+            <h3>Cradle Ceremony</h3>
+           
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+    let name = localStorage.getItem("username");
+    document.getElementById("username").innerText = name ? name : "User";
+</script>
+
+</body>
+</html>

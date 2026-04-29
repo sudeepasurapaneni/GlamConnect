@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Profile</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">✨ GlamConnect</div>
+    <div class="nav-center">
+        <a href="events.html">Book Now</a>
+        <a href="user_dashboard.html">Dashboard</a>
+    </div>
+    <div class="nav-right">
+        <span class="user-badge">👤 <span id="username"></span></span>
+        <button onclick="logoutUser()">⎋</button>
+    </div>
+</div>
+
+<div class="dashboard-container">
+    <div class="sidebar">
+        <div class="profile-card">
+            <div class="avatar">👩</div>
+            <h3 id="userNameCard"></h3>
+            <p id="userEmail">s1@gamil.com</p>
+        </div>
+
+        <ul class="menu">
+            <li onclick="goToUserDashboard()">🏠 Dashboard</li>
+            <li onclick="goToBookings()">📋 My Bookings</li>
+            <li onclick="goToPastBookings()">📜 Past Bookings</li>
+            <li onclick="goToFavorites()">❤️ Favorites</li>
+            <li onclick="goToReviews()">⭐ Reviews</li>
+            <li onclick="goToNotifications()">🔔 Notifications</li>
+            <li class="active" onclick="goToProfile()">👤 Profile</li>
+        </ul>
+    </div>
+
+    <div class="dashboard-content">
+        <h1 class="page-title">Profile <span>Settings</span></h1>
+
+        <div class="profile-form-card">
+            <label>Full Name</label>
+            <input type="text" value="Rahul Kumar">
+
+            <label>Email</label>
+            <input type="email" value="s1@gamil.com">
+
+            <label>Phone</label>
+            <input type="text" value="+91 98765 43210">
+
+            <label>City</label>
+            <input type="text" value="Hyderabad">
+
+            <button class="save-btn">Save Changes ✨</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    let name = localStorage.getItem("username") || "Rahul Kumar";
+    document.getElementById("username").innerText = name;
+    document.getElementById("userNameCard").innerText = name;
+</script>
+<script src="script.js"></script>
+</body>
+</html>

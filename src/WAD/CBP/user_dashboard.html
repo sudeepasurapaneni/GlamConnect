@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GlamConnect - User Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP NAVBAR -->
+<div class="navbar">
+    <div class="logo">✨ GlamConnect</div>
+
+    <div class="nav-center">
+        <a href="events.html">Book Now</a>
+        <a href="#">Dashboard</a>
+    </div>
+
+    <div class="nav-right">
+        <span class="user-badge">👤 <span id="username"></span></span>
+        <button onclick="logoutUser()">⎋</button>
+    </div>
+</div>
+
+<!-- MAIN DASHBOARD -->
+<div class="dashboard-container">
+
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+
+        <div class="profile-card">
+            <div class="avatar">👩</div>
+            <h3 id="userNameCard"></h3>
+            <p id="userEmail">user@email.com</p>
+        </div>
+        <ul class="menu">
+            <li class="active" onclick="goToUserDashboard()">🏠 Dashboard</li>
+            <li onclick="goToBookings()">📋 My Bookings</li>
+            <li onclick="goToPastBookings()">📜 Past Bookings</li>
+            <li onclick="goToFavorites()">❤️ Favorites</li>
+            <li onclick="goToReviews()">⭐ Reviews</li>
+            <li onclick="goToNotifications()">🔔 Notifications</li>
+            <li onclick="goToProfile()">👤 Profile</li>
+        </ul>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="dashboard-content">
+
+        <h1>Welcome back, <span id="welcomeName"></span> ✨</h1>
+
+        <!-- STATS -->
+        <div class="stats">
+            <div class="card">
+                <h2>2</h2>
+                <p>Upcoming</p>
+            </div>
+
+            <div class="card">
+                <h2>1</h2>
+                <p>Completed</p>
+            </div>
+
+            <div class="card">
+                <h2>3</h2>
+                <p>Favorites</p>
+            </div>
+        </div>
+
+        <!-- BOOKING -->
+        <h2 class="section-title">Upcoming Booking</h2>
+
+        <div class="booking-card">
+            <div>
+                <h3>💍 Marriage</h3>
+                <p>📅 15 April 2026, 10:00 AM</p>
+                <p>📍 Hyderabad</p>
+                <p>Artist: Priya Sharma</p>
+            </div>
+
+            <span class="status confirmed">Confirmed</span>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    let name = localStorage.getItem("username") || "User";
+
+    document.getElementById("username").innerText = name;
+    document.getElementById("welcomeName").innerText = name;
+    document.getElementById("userNameCard").innerText = name;
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>✨GlamConnect</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+/* NAVBAR CLEAN */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 25px; /* reduced */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg,#c471ed,#f64f59);
+    color: white;
+    box-sizing: border-box; /* IMPORTANT FIX */
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-btn {
+    margin-left: 10px;
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: white;
+    color: #ff4d6d;
+    font-weight: 500;
+}
+
+.nav-btn:hover {
+    background: black;
+    color: white;
+}
+
+/* HERO FIX (space for navbar) */
+.hero {
+    margin-top: 70px;
+}
+
+/* WHY PREMIUM */
+.why {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.why div {
+    background: linear-gradient(135deg,#fff,#f7f3ff);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.why div:hover {
+    transform: translateY(-5px);
+}
+
+/* REVIEWS PREMIUM */
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.review {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    text-align: left;
+}
+.why div {
+    background: linear-gradient(135deg,#fff,#f8f5ff);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.why div:hover {
+    transform: translateY(-6px) scale(1.02);
+}
+.review strong {
+    display: block;
+    margin-top: 10px;
+    color: #c471ed;
+}
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: linear-gradient(90deg,#c471ed,#f64f59);
+    color: white;
+}
+
+.nav-left span {
+    margin: 0 15px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.search {
+    padding: 8px;
+    width: 300px;
+    border-radius: 20px;
+    border: none;
+}
+
+.icons span {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* HERO VIDEO */
+.hero {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+.hero-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7); /* makes text visible */
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+}
+
+/* CATEGORY */
+.categories {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.cat {
+    text-align: center;
+    cursor: pointer;
+}
+
+.cat img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* SECTION */
+.section {
+    padding: 30px;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.card {
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card p {
+    padding: 10px;
+}
+
+/* POPUP */
+.modal {
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    width: 60%;
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* STICKY NAVBAR EFFECT */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* FLOAT LOGIN */
+.float-box {
+    position: fixed;
+    right: 20px;
+    top: 120px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.float-box button {
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    background: #c471ed;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* HOVER EFFECT */
+.card:hover, .cat:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* WHY SECTION */
+.why {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.why div {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* REVIEWS */
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.review {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+/* ===== DARK BACKGROUND ===== */
+body {
+    background: #f8f9fb;
+    color: #222;
+}
+
+/* ===== DARK GLASS CARDS ===== */
+.card,
+.review,
+.why div,
+.modal-content {
+    background: white;
+    color: #333;
+}
+
+/* ===== PINK HOVER GLOW ===== */
+.card:hover,
+.review:hover,
+.why div:hover,
+.cat:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 0 25px rgba(255, 77, 109, 0.6);
+}
+
+/* ===== NAV BUTTON HOVER ===== */
+.nav-btn:hover {
+    background: #ff4d6d;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">✨ GlamConnect</div>
+
+    <div class="nav-right">
+        <button class="nav-btn" onclick="window.location.href='login.html'">Login</button>
+        <button class="nav-btn" onclick="window.location.href='register.html'">Register</button>
+    </div>
+</div>
+
+<div class="hero">
+    <video autoplay muted loop playsinline>
+    <source src="12642435_1920_1080_50fps.mp4" type="video/mp4">
+</video>
+
+    <div class="hero-text">
+        <h1>Get Ready Like a Star ✨</h1>
+        <p>Book top artists for your special day</p>
+         <button class="hero-btn" onclick="window.location.href='login.html'">
+        Book Now
+    </button>
+    </div>
+</div>
+
+<!-- EVENTS -->
+<div class="section">
+    <h2>🎉 Events</h2>
+    <div class="categories">
+        <div class="cat" onclick="openModal('Marriage')">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop">
+            <p>Marriage</p>
+        </div>
+        <div class="cat" onclick="openModal('Reception')">
+            <img src="https://i.pinimg.com/control1/1200x/19/f4/ea/19f4ea15d38d0068e85117d3d41625c1.jpg">
+            <p>Reception</p>
+        </div>
+        <div class="cat" onclick="openModal('Birthday')">
+            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=200&h=200&fit=crop">
+            <p>Birthday</p>
+        </div>
+        <div class="cat" onclick="openModal('Mehendi')">
+            <img src="https://i.pinimg.com/1200x/36/98/b9/3698b916a55d991850f3aaec5ae07951.jpg">
+            <p>Mehendi</p>
+        </div>
+        <div class="cat" onclick="openModal('Sangeet')">
+            <img src="https://i.pinimg.com/736x/43/23/40/432340bb3fe5056e776eafd39996b848.jpg">
+            <p>Sangeet</p>
+        </div>
+        <div class="cat" onclick="openModal('Half Saree')">
+            <img src="https://i.pinimg.com/736x/34/f0/b5/34f0b5d290b32b229b5a241a291e3d00.jpg">
+            <p>Half Saree</p>
+        </div>
+    </div>
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+    <h2>💄 Services</h2>
+    <div class="cards">
+        <div class="card" onclick="openModal('Makeup')">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&h=250&fit=crop">
+            <p>Makeup</p>
+        </div>
+        <div class="card" onclick="openModal('Hair Styling')">
+            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            <p>Hair Styling</p>
+        </div>
+        <div class="card" onclick="openModal('Saree Draping')">
+            <img src="https://i.pinimg.com/1200x/47/fd/e5/47fde57e9e1af2c524fd59fbb53490c6.jpg">
+            <p>Saree Draping</p>
+        </div>
+        <div class="card" onclick="openModal('Dupatta Styling')">
+            <img src="https://i.pinimg.com/736x/c8/80/1b/c8801bbfa6f5d0cd1238c5292f8f4f96.jpg">
+            <p>Dupatta Draping</p>
+        </div>
+        <div class="card" onclick="openModal('Accessories')">
+            <img src="https://i.pinimg.com/1200x/11/dd/d3/11ddd34be9abae7976a45d27ec269f79.jpg">
+            <p>Accessory Styling</p>
+        </div>
+        <div class="card" onclick="openModal('Traditional Styling')">
+            <img src="https://i.pinimg.com/1200x/42/bc/9f/42bc9fc3e5afe19726226fa6fbdc696e.jpg">
+            <p>Traditional Styling</p>
+        </div>
+    </div>
+</div>
+
+<!-- WHY GLAMCONNECT -->
+<div class="section">
+    <h2>✨ Why GlamConnect?</h2>
+    <div class="why">
+        <div>
+            💄 <b>Top Verified Artists</b><br>
+            Only trusted professionals
+        </div>
+
+        <div>
+            💸 <b>No Hidden Pricing</b><br>
+            Transparent packages
+        </div>
+
+        <div>
+            🏡 <b>Doorstep Services</b><br>
+            Comfort at your home
+        </div>
+
+        <div>
+            ✨ <b>Custom Styling</b><br>
+            Designed for YOU
+        </div>
+    </div>
+</div>
+
+<!-- TRENDING LOOKS -->
+<div class="section">
+    <h2>📸 Trending Looks</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://i.pinimg.com/1200x/b7/75/48/b7754817701684fc2af32a84bbcb8dc1.jpg">
+            <p>Soft Glam</p>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/37/28/4b/37284b513e0727f2aee07d238fc6cc94.jpg">
+            <p>Bridal Glow</p>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/eb/57/62/eb5762155c356dfea7e85f13830358da.jpg">
+            <p>Traditional Look</p>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/40/0f/ce/400fce694a832067b8b77b15ec02e577.jpg">
+            <p>Party Look</p>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>⚡ How It Works</h2>
+    <div class="why">
+        <div>1️⃣ Select Event</div>
+        <div>2️⃣ Choose Services</div>
+        <div>3️⃣ Book Artist</div>
+        <div>4️⃣ Get Glam Ready ✨</div>
+    </div>
+</div>
+
+<!-- FINAL CTA -->
+<div class="section" style="text-align:center;">
+    <h2>Ready for your perfect look? 💄</h2>
+    <button onclick="window.location.href='login.html'"
+        style="padding:12px 25px;background:#c471ed;color:white;border:none;border-radius:20px;">
+        Book Now
+    </button>
+</div>
+
+<!-- POPUP -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">✖</span>
+
+        <h2 id="modalTitle"></h2>
+
+        <video controls>
+            <source src="https://cdn.coverr.co/videos/coverr-woman-getting-makeup-1617/1080p.mp4">
+        </video>
+
+        <p>Professional styling service with premium finish.</p>
+
+        <button onclick="window.location.href='login.html'"
+            style="padding:10px 20px;background:#c471ed;color:white;border:none;border-radius:20px;">
+            Book Now
+        </button>
+    </div>
+</div>
+
+<script>
+function openModal(name){
+    document.getElementById("modal").style.display="flex";
+    document.getElementById("modalTitle").innerText=name;
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display="none";
+}
+
+// SCROLL FLOAT LOGIN
+window.addEventListener("scroll", function(){
+    let box = document.getElementById("floatBox");
+    if(window.scrollY > 300){
+        box.style.display = "block";
+    } else {
+        box.style.display = "none";
+    }
+});
+</script>
+
+</body>
+</html>

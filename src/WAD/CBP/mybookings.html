@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Bookings</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">✨ GlamConnect</div>
+
+    <div class="nav-center">
+        <a href="events.html">Book Now</a>
+        <a href="#">Dashboard</a>
+    </div>
+
+    <div class="nav-right">
+        <span class="user-badge">👤 <span id="username"></span></span>
+        <button onclick="logoutUser()">⎋</button>
+    </div>
+</div>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="profile-card">
+            <div class="avatar">👩</div>
+            <h3 id="userNameCard"></h3>
+            <p id="userEmail">user@email.com</p>
+        </div>
+
+        <ul class="menu">
+            <li onclick="goToUserDashboard()">🏠 Dashboard</li>
+            <li class="active" onclick="goToBookings()">📋 My Bookings</li>
+            <li onclick="goToPastBookings()">📜 Past Bookings</li>
+            <li onclick="goToFavorites()">❤️ Favorites</li>
+            <li onclick="goToReviews()">⭐ Reviews</li>
+            <li onclick="goToNotifications()">🔔 Notifications</li>
+            <li onclick="goToProfile()">👤 Profile</li>
+        </ul>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="dashboard-content">
+
+        <h1>My <span style="color:#d63384">Bookings</span></h1>
+
+        <!-- BOOKING CARD -->
+        <div class="booking-card" style="margin-top:20px;">
+            <div>
+                <h3>💍 Marriage</h3>
+                <p>🎨 Priya Sharma</p>
+                <p>⏰ 10:00 AM</p>
+                <p>📅 2026-04-15</p>
+                <p>📍 Hyderabad</p>
+
+                <div style="margin-top:10px;">
+                    <span class="tag">HD Makeup</span>
+                    <span class="tag">Hair Bun</span>
+                    <span class="tag">Saree Draping</span>
+                </div>
+
+                <h3 style="margin-top:10px; color:#d63384;">₹8,000</h3>
+            </div>
+
+            <div>
+                <span class="status confirmed">Confirmed</span><br><br>
+                <button class="continue-nav">Reschedule</button>
+                <button class="back-nav">Cancel</button>
+            </div>
+        </div>
+
+        <!-- SECOND CARD -->
+        <div class="booking-card" style="margin-top:20px;">
+            <div>
+                <h3>🎂 Birthday</h3>
+                <p>🎨 Ananya Reddy</p>
+                <p>⏰ 04:00 PM</p>
+                <p>📅 2026-05-02</p>
+                <p>📍 Hyderabad</p>
+
+                <div style="margin-top:10px;">
+                    <span class="tag">Party Makeup</span>
+                    <span class="tag">Hair Waves</span>
+                </div>
+
+                <h3 style="margin-top:10px; color:#d63384;">₹3,200</h3>
+            </div>
+
+            <div>
+                <span class="status" style="background:#fff3cd;color:#856404;">Pending</span><br><br>
+                <button class="continue-nav">Reschedule</button>
+                <button class="back-nav">Cancel</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    let name = localStorage.getItem("username") || "User";
+
+    document.getElementById("username").innerText = name;
+    document.getElementById("userNameCard").innerText = name;
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

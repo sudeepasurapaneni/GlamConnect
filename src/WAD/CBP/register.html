@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Artist Booking-Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- LEFT -->
+    <div class="left">
+
+        <h1 id="mainTitle">Find Your Perfect Artist</h1>
+        <p class="subtitle">
+            Connect with top beauty professionals for your special occasions.
+        </p>
+
+        <ul>
+            <li>✔ Verified artists</li>
+            <li>✔ Transparent pricing</li>
+            <li>✔ Doorstep service</li>
+        </ul>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+        <div class="login-box">
+
+            <!-- TABS -->
+            <div class="tabs">
+                <button class="tab active" onclick="switchRegister('user')">Client Registration</button>
+                <button class="tab" onclick="switchRegister('artist')">Artist Onboarding</button>
+            </div>
+
+            <h2>Create Account</h2>
+
+            <!-- USER FORM -->
+            <form id="userForm" onsubmit="return validateUser()">
+
+                <label>Full Name</label>
+                <input type="text" id="u_name" required>
+
+                <label>Email</label>
+                <input type="email" id="u_email" required>
+
+                <label>Phone</label>
+                <input type="tel" id="u_phone" required>
+
+                <label>Gender</label>
+                <select id="u_gender" required>
+                    <option value="">Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+
+                <label>DOB</label>
+                <input type="date" id="u_dob" required>
+
+                <label>City</label>
+                <select id="u_city" required>
+                    <option value="">Select city</option>
+                    <option>Hyderabad</option>
+                    <option>Bangalore</option>
+                    <option>Chennai</option>
+                    <option>Kolkata</option>
+                    <option>Mumbai</option>
+                </select>
+
+                <label>Language</label>
+                <select id="u_lang" required>
+                    <option value="">Language</option>
+                    <option>English</option>
+                    <option>Telugu</option>
+                    <option>Hindi</option>
+                    <option>Tamil</option>
+                </select>
+
+                <label>Address</label>
+                <input type="text" id="u_address" required>
+
+                <label>Alternate Phone</label>
+                <input type="tel" id="u_altphone">
+
+                <button class="login-btn">Register as User</button>
+                <p class="register-text">
+                    Already have an account?
+                        <a href="login.html">Sign In</a>
+                </p>
+            </form>
+
+            <!-- ARTIST FORM -->
+            <form id="artistForm" style="display:none;" onsubmit="return validateArtist()">
+
+                <label>Full Name</label>
+                <input type="text" id="a_name" required>
+
+                <label>Email</label>
+                <input type="email" id="a_email" required>
+
+                <label>Phone</label>
+                <input type="tel" id="a_phone" required>
+
+                <label>Gender</label>
+                <select id="a_gender" required>
+                    <option value="">Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+
+                <label>DOB</label>
+                <input type="date" id="a_dob" required>
+
+                <label>City</label>
+                <select id="a_city" required>
+                    <option value="">Select city</option>
+                    <option>Hyderabad</option>
+                    <option>Bangalore</option>
+                </select>
+
+                <label>Language</label>
+                <select id="a_lang" required>
+                    <option value="">Language</option>
+                    <option>English</option>
+                    <option>Telugu</option>
+                </select>
+
+                <label>Address</label>
+                <input type="text" id="a_address" required>
+
+                <label>Studio Name</label>
+                <input type="text" id="studio" required>
+
+                <label>Experience (years)</label>
+                <input type="number" id="exp" required>
+
+                <label>Specialization</label>
+                <input type="text" id="spec" required>
+
+                <label>Bio</label>
+                <textarea id="bio"></textarea>
+
+                <label>Instagram</label>
+                <input type="text" id="insta">
+
+                <button class="login-btn">Register as Artist</button>
+                <p class="register-text">
+                    Already have an account?
+                        <a href="login.html">Sign In</a>
+                </p>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

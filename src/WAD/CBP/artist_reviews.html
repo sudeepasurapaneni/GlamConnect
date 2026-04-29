@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reviews</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="navbar">
+    <div class="logo">✨ GlamConnect</div>
+    <div class="nav-center">
+        <a href="events.html">Book Now</a>
+        <a href="artist_dashboard.html">Dashboard</a>
+    </div>
+    <div class="nav-right">
+        <span class="user-badge">👤 <span id="artistTopName"></span></span>
+        <button onclick="logoutUser()">⎋</button>
+    </div>
+</div>
+
+<div class="dashboard-container">
+    <div class="sidebar">
+        <div class="profile-card">
+            <div class="avatar">🎨</div>
+            <h3 id="artistNameCard"></h3>
+            <p>Professional Artist</p>
+        </div>
+
+        <ul class="menu">
+            <li onclick="goToArtistDashboard()">🏠 Dashboard</li>
+            <li onclick="goToArtistRequests()">📩 Booking Requests</li>
+            <li onclick="goToArtistConfirmed()">✅ Confirmed</li>
+            <li onclick="goToArtistAvailability()">🗓️ Availability</li>
+            <li onclick="goToArtistServices()">💄 Services & Pricing</li>
+            <li class="active" onclick="goToArtistReviews()">⭐ Reviews</li>
+            <li onclick="goToArtistEarnings()">💰 Earnings</li>
+            <li onclick="goToArtistProfile()">👤 Profile</li>
+        </ul>
+    </div>
+
+    <div class="dashboard-content">
+        <h1>Reviews & <span style="color:#d63384">Ratings</span></h1>
+
+        <div class="big-rating-box">
+            <h1>4.9</h1>
+            <div class="stars">★★★★★</div>
+            <p>Based on 234 reviews</p>
+        </div>
+
+        <div class="review-card-box">
+            <div style="display:flex; justify-content:space-between; gap:20px;">
+                <div>
+                    <h3>Rahul K.</h3>
+                    <p>"Absolutely loved the bridal makeup! Priya was amazing."</p>
+                    <div class="review-date">Feb 2026</div>
+                </div>
+                <div style="color:#e0b24c;">★★★★★</div>
+            </div>
+        </div>
+
+        <div class="review-card-box">
+            <div style="display:flex; justify-content:space-between; gap:20px;">
+                <div>
+                    <h3>Meena S.</h3>
+                    <p>"Perfect makeup for my daughter's half saree ceremony."</p>
+                    <div class="review-date">Jan 2026</div>
+                </div>
+                <div style="color:#e0b24c;">★★★★★</div>
+            </div>
+        </div>
+
+        <div class="review-card-box">
+            <div style="display:flex; justify-content:space-between; gap:20px;">
+                <div>
+                    <h3>Anita R.</h3>
+                    <p>"Great work! Would definitely book again."</p>
+                    <div class="review-date">Dec 2025</div>
+                </div>
+                <div style="color:#e0b24c;">★★★★☆</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let artistName = localStorage.getItem("username") || "Priya Sharma";
+document.getElementById("artistTopName").innerText = artistName;
+document.getElementById("artistNameCard").innerText = artistName;
+</script>
+<script src="script.js"></script>
+</body>
+</html>

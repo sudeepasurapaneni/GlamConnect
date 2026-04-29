@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="navbar">
+    <div class="logo">✨ GlamConnect</div>
+
+    <div class="nav-right">
+        <button class="nav-btn" onclick="window.location.href='home.html'">Home</button>
+        <button class="nav-btn" onclick="window.location.href='cart.html'">Cart</button>
+    </div>
+</div>
+<body>
+
+<!-- HEADER -->
+<div class="step-header">
+    <button class="back-btn" onclick="window.history.back()">←</button>
+    <h2>Checkout</h2>
+</div>
+
+<!-- MAIN CONTAINER -->
+<div class="checkout-container">
+
+    <!-- LEFT SIDE -->
+    <div class="checkout-left">
+
+        <!-- EVENT DETAILS -->
+        <div class="checkout-card">
+            <h3>Event Details</h3>
+            <p>📅 Date: <span id="eventDateText"></span></p>
+            <p>⏰ Time: <span id="eventTimeText"></span></p>
+            <p>📍 Location: <span id="eventCityText"></span></p>
+        </div>
+
+        <!-- CART ITEMS -->
+        <div class="checkout-card" id="cartItems">
+            <!-- JS injects artist + services -->
+        </div>
+        <div class="checkout-card">
+    <h3>Payment Method</h3>
+
+    <label class="payment-option">
+        <input type="radio" name="payment" checked>
+        UPI – Pay using GPay, PhonePe
+    </label>
+
+    <label class="payment-option">
+        <input type="radio" name="payment">
+        Credit Card – Visa, Mastercard
+    </label>
+
+    <label class="payment-option">
+        <input type="radio" name="payment">
+        Debit Card – All major banks
+    </label>
+
+    <input type="text" placeholder="Enter UPI ID" class="upi-input">
+</div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="checkout-right">
+
+        <h3>Order Summary</h3>
+
+        <p>Subtotal <span id="subtotal">₹0</span></p>
+        <p>Service Fee (5%) <span id="fee">₹0</span></p>
+
+        <hr>
+
+        <h2 class="total">Total <span id="total">₹0</span></h2>
+
+        <button class="pay-btn">Pay <span id="payAmount">₹0</span></button>
+
+        <p style="font-size:12px; opacity:0.7; margin-top:10px;">
+            By completing this booking, you agree to our Terms.
+        </p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+/* ===== LOAD CART INTO NEW UI ===== */
+document.addEventListener("DOMContentLoaded", () => {
+
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const cartItems = document.getElementById("cartItems");
+    const subtotalEl = document.getElementById("subtotal");
+    const feeEl = document.getElementById("fee");
+    const totalEl = document.getElementById("total");
+    const payAmountEl = document.getElementById("payAmount");
+
+    const date = localStorage.getItem("eventDate") || "Not set";
+    const time = localStorage.getItem("startTime") || "Not set";
+    const city = localStorage.getItem("city") || "Hyderabad";
+
+    document.getElementById("eventDateText").innerText = date;
+    document.getElementById("eventTimeText").innerText = time;
+    document.getElementById("eventCityText").innerText = city;
+
+    if (cart.length === 0) {
+        cartItems.innerHTML = "<h3>Your cart is empty</h3>";
+        return;
+    }
+
+    let grouped = {};
+    let subtotal = 0;
+
+    // GROUP BY ARTIST
+    cart.forEach(item => {
+        if (!grouped[item.artist]) {
+            grouped[item.artist] = [];
+        }
+        grouped[item.artist].push(item);
+        subtotal += item.price;
+    });
+
+    let html = "";
+
+    for (let artist in grouped) {
+        html += `<div class="artist-block">`;
+        html += `<h3>${artist}</h3>`;
+
+        grouped[artist].forEach(service => {
+            html += `
+                 <div class="checkout-service">
+                     <span>${service.service}</span>
+                     <strong>₹${service.price}</strong>
+                     <button onclick="removeCheckoutItem('${service.artist}', '${service.service}', ${service.price})">
+                Remove
+            </button>
+        </div>
+    `;
+});
+
+        html += `<hr>`;
+        html += `</div>`;
+    }
+
+    cartItems.innerHTML = html;
+
+    const fee = Math.round(subtotal * 0.05);
+    const total = subtotal + fee;
+
+    subtotalEl.innerText = "₹" + subtotal;
+    feeEl.innerText = "₹" + fee;
+    totalEl.innerText = "₹" + total;
+    payAmountEl.innerText = "₹" + total;
+
+});
+</script>
+
+</body>
+</html>

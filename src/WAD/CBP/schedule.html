@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Schedule & Location</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="navbar">
+    <div class="logo">✨ GlamConnect</div>
+
+    <div class="nav-right">
+        <button class="nav-btn" onclick="window.location.href='home.html'">Home</button>
+        <button class="nav-btn" onclick="window.location.href='cart.html'">Cart</button>
+    </div>
+</div>
+<body>
+
+<!-- STEP HEADER -->
+<div class="step-header">
+    <button class="back-btn" ><a href="services.html">←</a></button>
+    <h2 id="eventTitle">Event Details</h2>
+    <span class="step-text">Step 2 of 3</span>
+</div>
+
+<div class="progress-bar">
+    <div class="progress step-2"></div>
+</div>
+
+<!-- MAIN CONTAINER -->
+<div class="schedule-container">
+
+    <h1>When & Where is your event?</h1>
+    <p class="subtitle">Select the date, time, and location to find nearby artists</p>
+
+    <!-- DATE & TIME -->
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>📅 Event Date</h3>
+            <input type="date" id="eventDate">
+        </div>
+
+        <div class="card">
+            <h3>⏰ Start Time</h3>
+            <select id="startTime"></select>
+            <small>When should the artist start?</small>
+        </div>
+
+        <div class="card">
+            <h3>⏱ Completion Time</h3>
+            <select id="endTime"></select>
+            <small>By when should everything be ready?</small>
+        </div>
+
+    </div>
+
+    <!-- LOCATION -->
+    <div class="card location-card">
+        <h3>📍 Event Location</h3>
+
+        <label>City</label>
+        <select id="city">
+            <option value="">Select your city</option>
+            <option>Hyderabad</option>
+            <option>Bangalore</option>
+            <option>Chennai</option>
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option>Pune</option>
+            <option>Kolkata</option>
+        </select>
+
+        <label>Area / Locality</label>
+        <input type="text" placeholder="e.g., Madhapur, Koramangala">
+
+        <label>Pincode</label>
+        <input type="text" placeholder="e.g., 500081">
+    </div>
+
+    <!-- NAV -->
+    <div class="nav-buttons">
+        <button class="back-nav">← Back</button>
+        <button class="continue-nav" onclick="goToArtists()">Find Artists →</button>
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
