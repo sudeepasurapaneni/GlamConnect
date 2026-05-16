@@ -1,14 +1,14 @@
 {
   "name": "GlamConnect",
   "short_name": "GlamConnect",
-  "start_url": "home.html",
+  "start_url": "./home.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ff69b4",
   "icons": [
     {
-      "src": "icon.png",
-      "sizes": "192x192",
+      "src": "./icon.png",
+      "sizes": "736x736",
       "type": "image/png"
     }
   ]
