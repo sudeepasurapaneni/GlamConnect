@@ -1,7 +1,7 @@
 {
   "name": "GlamConnect",
   "short_name": "GlamConnect",
-  "start_url": "./home.html",
+  "start_url": "/GlamConnect/src/WAD/CBP/home.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ff69b4",
